@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    /* background: #8c7ae6; */
+    background-image: url('https://wallsdesk.com/wp-content/uploads/2018/04/Plane-Wallpapers-and-Backgrounds.jpg');
+    text-align: center;
+    font-family: 'Montserrat';
+}
+
+.navbar {
+    background-color: #333333;
+}
+
+a {
+    color: #f1f9f9;
+}
+
+a:hover {
+    color: #f0f0f0;
+}
+.headingtile{
+    padding: 2rem;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+li {
+float: left;
+}
+  
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+.active{
+    background-color: #14aaf0;
+}
+
+.prediction-text {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    margin: auto 20rem;
+    border-radius: 10px;
+}

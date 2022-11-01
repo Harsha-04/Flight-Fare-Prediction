@@ -1,0 +1,151 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Fare Prediction</title>
+
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="../static/styles/style.css">
+
+
+</head>
+
+<body>
+    <!-- As a heading -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+               <center><a class="navbar-brand" href="/">FLIGHT FARE PREDICTION</a></center>
+            </div>
+        </div>
+    </nav>
+
+    <br><br><br><br><br><br>
+
+
+    <div class="container">
+
+
+
+        <form class="form" action="\predict" method="post">
+
+
+            <div class="row">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">Departure</div>
+                        <!-- Departure -->
+                        <input class="date" type="datetime-local" name="Dep_Time" id="Dep_Time" required="required">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">Arrival</div>
+                        <!-- Arrival -->
+                        <input class="date1" type="datetime-local" name="Arrival_Time" id="Arrival_Time" required="required">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">Source</div>
+                        <!-- Source -->
+                        <select name="Source" id="Source" required="required">
+                            <option value=""></option>
+                            <option value="Banglore">Bangalore</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Kolkata">Kolkata</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Chennai">Chennai</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">Destination</div>
+                        <!-- Destination -->
+                        <select name="Destination" id="Destination" required="required">
+                            <option value=""></option>
+                            <option value="Banglore">Bangalore</option>
+                            <option value="Cochin">Cochin</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="New Delhi">New Delhi</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Kolkata">Kolkata</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">Stopage</div>
+                        <!-- Total stops -->
+                        <select name="Stops" required="required">
+                            <option value=""></option>
+                            <option value="0">Non-Stop</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">Choose Airline</div>
+                        <!-- Airline -->
+                        <select name="airline" id="airline" required="required">
+                            <option value=""></option>
+                                <option name="AirAsia" value="AirAsia">AirAsia</option>
+                                <option name="Jet_Airways" value="Jet_Airways">Jet Airways</option>
+                                <option name="IndiGo" value="IndiGo">IndiGo</option>
+                                <option name="Air_India" value="Air_India">Air India</option>
+                                <option name="Multiple_carriers" value="Multiple_carriers">Multiple Carriers</option>
+                                <option name="SpiceJet" value="SpiceJet">SpiceJet</option>
+                                <option name="Vistara" value="Vistara">Vistara</option>
+                                <option name="GoAir" value="GoAir">GoAir</option>
+                                <option name="Multilple_carriers_Premium_economy" value="Multilple_carriers_Premium_economy">Multilple carriers Premium economy</option>
+                                <option name="Jet_Airways_Business" value="Jet_Airways_Business">Jet Airways Business</option>
+                                <option name="Vistara_Premium_economy" value="Vistara_Premium_economy">Vistara Premium economy</option>
+                                <option name="Trujet" value="Trujet">Trujet</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <!-- Submit -->
+            <input type="submit" value="Submit" class="btn btn-secondary">
+        </form>
+
+        <br>
+        <br><br><br><br><br>
+        <h3 class="prediction_text">{{ prediction_text }}</h3>
+
+        <br>
+        <br>
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
